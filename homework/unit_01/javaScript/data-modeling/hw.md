@@ -60,13 +60,23 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+ var to-do = {
+     current-objective: dust;
+     completed-objective: wash dishes;
+     long-term-objective: clean house;
+ }
+  'The entities I used  are current, completed, and long-term. The reason for these are that when you take a to do list you want to show what you have done what you are currently doing and what your end goal is.'
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+var photo-collection ={
+    numberOfPhotos: 5;
+    photosShared: 3;
+    whatAlbum: facebook;
+}
+'Each one of these are important because you need to know how many photos you have and which album they are stored in. And then you need to know how many you have shared that way you wont share the same one twice'
 
 ### 3. Home Automation Manager
 
@@ -75,15 +85,24 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
-
+var home = {
+    time: 5:45pm;
+    temperature: 80F;
+}
+the time allows to tell the lights to turn on and off and also always you to control the thermostat by setting it to the right temperature. The temperature lets you know if it need to be hotter or colder.
 ### 4. Sneaker Store
 
 This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+var sneakers = {
+    brand: Nike;
+    style: FreeRunner;
+    color: green;
+    size: 13;
+}
+'these are all very important it allows you to sort them all and to allow the customer to find the exact one they want'
 
 ## Representing Abstractions in Code
 
@@ -139,7 +158,7 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+'Advantages for a station is that you find out where they are and what they are like, and for a rail line you find out not only what station you need but it allows you to see where its going so you can plan a trip. Disadvantages for a station it may not be the one you want so you will have to search them one by one, and for a rail line  there is to much infor mation so you will have to scroll through the stations to find the one you want.'
 
 ### 6. Doctor Appointment App
 
@@ -242,7 +261,7 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+'Advantages of option one everything is broken down which allows you to understand it a lot better, and for too its very simplistic and you see what you need. Disadvantages for option 2 it may take longer for you to find what you need cause you have to keep opening folders to find what you are looking for, option 2 its all open and takes up way yo much space so when you have multiple it looks very jumbled. Option 1 i would use it if i had a bunch of data to store i could collapse it and make it look a lot neater, option 2 id use it when i have a few things to store i would use that bust because i could see everything i need.'
 
 ## Tying It Together
 
@@ -253,13 +272,27 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+O - size and color
+X - size and color
+grid - size and color
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
-
+var tic-tac-toe-board = {
+    grid:{
+        size: 25;
+        color: orange;
+        O:{
+            size: 5;
+            color: red;
+        }
+        X:{
+            size: 5;
+            color: black;
+        }
+    }
+}
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+I chose these entities cause this is what the user sees when they play the game, I repersented it like this cause it lays it out all nice and neat and the fact that the X and the O are both used in the grid it made sence that they should go under it.
