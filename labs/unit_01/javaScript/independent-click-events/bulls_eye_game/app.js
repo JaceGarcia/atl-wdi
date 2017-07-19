@@ -22,7 +22,9 @@ window.onload = function() {
   var ring3 = document.querySelector('.ring-3');
 
   body.addEventListener('click', bullseyeGame.miss);
-  ring1.addEventListener('click', bullseyeGame.outerRing)
+  ring1.addEventListener('click', bullseyeGame.outerRing);
+  ring2.addEventListener('click', bullseyeGame.middleRing);
+  ring3.addEventListener('click', bullseyeGame.bullseye);
 }
 
 
@@ -34,7 +36,7 @@ var bullseyeGame = {
     this.score += points
 
     scoreElement.innerHTML = `${this.score} points`
-  },
+ },
 
   miss: function(event) {
     event.stopPropagation();
@@ -46,6 +48,26 @@ var bullseyeGame = {
 
   outerRing: function(event) {
     event.stopPropagation();
-    alert('outerRing was clicked')
+    bullseyeGame.updateScore(10);
+    alert('outerRing was clicked');
+},
+
+  middleRing: function(event) {
+    event.stopPropagation();
+    bullseyeGame.updateScore(50);
+    alert('middleRing was clicked');
+},
+
+  bullseye: function(event) {
+     event.stopPropagation();
+     bullseyeGame.updateScore(10);
+     alert('Bullseye');
+ },
+
+toggleColor: function(color, event) {
+    event.target.style.backgroundColor = 'yellow'
+    setTimeout(function(){
+        event.target.style.backgroundColor = color;
+    }, 2000);
   }
 }
