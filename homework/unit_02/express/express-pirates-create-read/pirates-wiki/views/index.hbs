@@ -1,0 +1,14 @@
+
+<h1> You have {{pirates.length}} Pirates </h1>
+<a href="/pirates/new">Add a pirate</a>
+<ul>
+  {{#each todos}}
+    <li>name: <a href="/pirates/{{@index}}">{{name}}</a></li>
+    <li>birthplace: {{birthplace}}</li>
+    <li>death_year: {{death_year}}</li>
+    <li>base: {{base}}</li>
+    <li>nickname: {{nickname}}</li>
+
+    <br>
+  {{/each}}
+</ul>
