@@ -32,7 +32,7 @@ var player2 = {
   }
 };
 
-var player1 = {
+var player3 = {
   name: "Trinity",
   feedTamagotchi: function(tamagotchi) {
     tamagotchi.foodInTummy++;
