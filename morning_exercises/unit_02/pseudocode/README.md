@@ -60,9 +60,13 @@ shipFuelCost(3, 12) => 6225.25
 #### The Pseudocode:
 ```
 - Find the distance of the earth circumference in miles
+var circumference = 24901;
 - Calculate the # of gallons used to travel around the earth
+var used = (shipFuelCost/fuelPrice)*milesPerGallon;
   - circumference / MPG (miles per gallon)
+  var gallons = 2401/12
 - Calculate the cost:
+var gallonsUsed = (gallons * fuelPrice);
   - total gallons used * cost of fuel
 ```
 
@@ -87,16 +91,24 @@ calcFruitJuice(3, 20, 2, 55) => 0.34
 #### The Pseudocode:
 ```
 - Find the total amount of pure fruit juice (gal)
+calcFruitJuice(3, 20, 2, 55) => 0.34
   - Total of Costco pure fruit juice:
+  var costcoPureFruitJuice = 20/100;
     - percentage pure fruit juice * number of gallons
+    var cosFruitJuice = (20/100)*5;
   - Total of Kirkland pure fruit juice:
+  var kirklandPureFruitJuice = 55/100
     - percentage pure fruit juice * number of gallons
+    var kirkFruitJuice = (55/100)*5
   - Add Costco pure fruit juice total + Kirkland pure fruit juice total
+  var totalFruitJuice = (20/100) + (55/100)
 - Find the total amount of juice (gal):
   - Total of Costco juice + Total of Kirkland Juice
+  var totalJuice = 2 + 3
 - Calculate (total pure fruit juice) / (total juice)
+var pureToJuice = totalFruitJuice / totalJuice;
 ```
-<!-- 
+<!--
 ### Testing Your Work
 
 A set of automated tests, written in the (Mocha.js)[https://mochajs.org/] testing framework, has been provided for you with this exercise. To run these tests, open up a new tab `ctrl + t` and type `npm test` into the console from the `morning_exercise` directory of this repo. Test your work regularly, and read the feedback from the tests carefully -- it may give you a clue about what to do next. -->
