@@ -12,7 +12,7 @@ var user1 = {
         newYork: 'Madison Square',
         tickets: [{
             liveNation: 209,
-            ticketMaster: 210,
+            ticketMaster: 210
         }]
 
     }]
@@ -30,7 +30,7 @@ var user2 = {
     mailBox:[{
             read: 3432,
             unRead: 34322,
-            starred: 5,
+            starred: 5
 
     }]
     }]
