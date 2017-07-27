@@ -1,5 +1,6 @@
 //requirements: require mongoose
 var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
 
 
 //create your donut schema:
@@ -15,4 +16,7 @@ var donutSchema = new Schema({;
 })
 
 //export your donut with module.exports()
-module.exports = router;
+
+
+
+module.exports = donutSchema;
