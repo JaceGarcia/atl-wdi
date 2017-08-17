@@ -1,9 +1,12 @@
-import React, {Component} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
-import DebitList from './components/DebitsList';
-import styles from './App.css';
+import Debits from './components/Debits';
+import Credits from './components/Credits';
+import DebitsList from './components/DebitsList';
+import CreditsList from './components/CreditsList';
 import axios from 'axios';
 
 class App extends Component {
@@ -13,8 +16,8 @@ class App extends Component {
 
         this.state = {
             currentUser: {
-                userName: 'SuicideBySausage',
-                memberSince: 2010,
+                userName: 'ejonelunas',
+                memberSince: 1995
             },
             debits: [],
             credits: []
@@ -57,22 +60,27 @@ class App extends Component {
     render() {
 
         const accountBalance = this._calculateAccountBalance();
+        const debitBalance = this._getDebits();
+        const creditBalance = this._getCredits();
 
         const HomeComponent = () => (<Home accountBalance={accountBalance} />);
         const UserProfileComponent = () => (
             <UserProfile
                 userName={this.state.currentUser.userName}
                 memberSince={this.state.currentUser.memberSince} />
-        )
-        const debitComponent = () => (<DebitList debits={this.state.debits} accountBalance={accountBalance} />);
+        );
 
+        const debitComponent = () => (<DebitsList debits={this.state.debits} accountBalance={accountBalance} />);
+        const creditComponent = () => (<CreditsList credits={this.state.debits} />);
 
         return (
             <Router>
                 <div>
                     <Route exact path="/" render={HomeComponent} />
                     <Route exact path="/userProfile" render={UserProfileComponent} />
-                    <Route exact path="/debits" render={debitComponent} />
+                    <Route exact path="/debits" component={debitComponent} />
+                    <Route exact path="/debits" render={accountBalance} />
+                    <Route exact path="/Credits" render={creditComponent} />
                 </div>
             </Router>
         );
